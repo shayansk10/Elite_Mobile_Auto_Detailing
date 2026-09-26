@@ -4,32 +4,32 @@ import { BUSINESS_INFO } from '../data/content';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-[#05080e] relative border-t border-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="about" className="py-20 sm:py-24 bg-[#05080e] relative border-t border-slate-900 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
           {/* Left Column: Official Logo Showcase & Heritage Card */}
           <div className="lg:col-span-5 relative text-center">
-            <div className="relative inline-block max-w-sm mx-auto">
+            <div className="relative inline-block max-w-xs sm:max-w-sm mx-auto">
               
               {/* Outer Glowing Circle Border */}
               <div className="relative p-1 rounded-full bg-gradient-to-tr from-cyan-500 via-blue-600 to-sky-400 shadow-2xl shadow-cyan-500/30">
-                <div className="p-3 rounded-full bg-black">
+                <div className="p-2 sm:p-3 rounded-full bg-black">
                   <img
                     id="about-official-logo"
                     src="/elite-logo.jpg"
                     alt="Official Elite Mobile Auto Detailing Brand Emblem"
-                    className="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full"
+                    className="w-48 h-48 sm:w-80 sm:h-80 max-w-full object-cover rounded-full"
                     referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
 
               {/* Decorative Tag Below */}
-              <div className="mt-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950 border border-cyan-500/40 text-cyan-300 text-xs font-mono">
-                <Shield className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Showroom Finish Wherever You Park</span>
+              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-950 border border-cyan-500/40 text-cyan-300 text-[10px] sm:text-xs font-mono max-w-full">
+                <Shield className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                <span className="truncate">Showroom Finish Wherever You Park</span>
               </div>
             </div>
           </div>

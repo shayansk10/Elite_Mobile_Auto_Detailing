@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDetail, onViewServices }) => {
             {/* Main Headline */}
             <h1
               id="hero-main-heading"
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-heading font-black tracking-tight text-white leading-[1.05]"
+              className="text-3xl min-[380px]:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-heading font-black tracking-tight text-white leading-[1.08] sm:leading-[1.05]"
             >
               PREMIUM AUTO DETAILING.
               <span className="block mt-1 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">
@@ -172,13 +172,13 @@ export const Hero: React.FC<HeroProps> = ({ onBookDetail, onViewServices }) => {
               </div>
 
               {/* Floating Quality Badge */}
-              <div className="absolute -bottom-5 -left-4 sm:-bottom-6 sm:left-4 z-20 px-4 py-3 rounded-xl bg-[#090e17]/95 border border-cyan-500/40 backdrop-blur-lg shadow-xl shadow-black/80 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="absolute -bottom-5 left-1 sm:-bottom-6 sm:left-4 z-20 px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-[#090e17]/95 border border-cyan-500/40 backdrop-blur-lg shadow-xl shadow-black/80 flex items-center gap-2.5 sm:gap-3 max-w-[calc(100%-0.5rem)] sm:max-w-none">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <div>
-                  <div className="text-xs font-bold text-white tracking-wide">ELITE CRAFTSMANSHIP</div>
-                  <div className="text-[11px] text-cyan-400">Trained • Insured • Passionate</div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-white tracking-wide truncate">ELITE CRAFTSMANSHIP</div>
+                  <div className="text-[10px] sm:text-[11px] text-cyan-400 truncate">Trained • Insured • Passionate</div>
                 </div>
               </div>
 

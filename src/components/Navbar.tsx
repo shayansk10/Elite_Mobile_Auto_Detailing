@@ -155,7 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <div
             id="mobile-menu-content"
-            className="fixed top-16 right-0 bottom-0 w-full max-w-xs bg-[#06090e] border-l border-cyan-500/20 p-6 flex flex-col justify-between overflow-y-auto"
+            className="fixed top-16 right-0 bottom-0 w-[85vw] max-w-xs bg-[#06090e] border-l border-cyan-500/20 p-5 sm:p-6 flex flex-col justify-between overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div>

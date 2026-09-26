@@ -45,11 +45,11 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer id="site-footer" className="bg-[#020306] border-t border-cyan-500/20 pt-20 pb-28 lg:pb-12 text-slate-400 relative">
+    <footer id="site-footer" className="bg-[#020306] border-t border-cyan-500/20 pt-16 sm:pt-20 pb-28 lg:pb-12 text-slate-400 relative overflow-hidden w-full max-w-full">
       
       {/* Top Footer Banner: Big Final Conversion Prompt */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-950 via-[#081220] to-slate-950 border border-cyan-500/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 w-full">
+        <div className="p-5 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-950 via-[#081220] to-slate-950 border border-cyan-500/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden w-full">
           
           <div className="space-y-2 text-center md:text-left relative z-10">
             <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-widest block">

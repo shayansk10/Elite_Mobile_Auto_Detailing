@@ -13,11 +13,11 @@ export const ServiceAreaSection: React.FC = () => {
   };
 
   return (
-    <section id="service-area" className="py-24 bg-[#030508] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="service-area" className="py-20 sm:py-24 bg-[#030508] relative overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Globe className="w-3.5 h-3.5" />
             Nationwide Mobile Detailing
@@ -35,7 +35,7 @@ export const ServiceAreaSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Left Column: Nationwide Mobile Detailing & ZIP Code Checker */}
-          <div className="p-8 rounded-2xl bg-slate-950/90 border border-slate-800 shadow-xl flex flex-col justify-between space-y-6">
+          <div className="p-5 sm:p-8 rounded-2xl bg-slate-950/90 border border-slate-800 shadow-xl flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <h3 className="text-xl sm:text-2xl font-heading font-black text-white flex items-center gap-2.5">
                 <MapPin className="w-6 h-6 text-cyan-400 shrink-0" />
@@ -83,7 +83,7 @@ export const ServiceAreaSection: React.FC = () => {
           </div>
 
           {/* Right Column: Premium Value Proposition */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-black border border-cyan-500/30 shadow-xl flex flex-col justify-between space-y-6">
+          <div className="p-5 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-black border border-cyan-500/30 shadow-xl flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-widest block">
                 CONVENIENCE RE-DEFINED
@@ -118,11 +118,11 @@ export const ServiceAreaSection: React.FC = () => {
                 &ldquo;Your time matters. We make premium detailing easier to fit into your schedule.&rdquo;
               </p>
 
-              <div className="flex items-center justify-between pt-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-2">
                 <div className="text-xs text-slate-400">
                   <span>Questions about coverage?</span>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                   <a
                     href={BUSINESS_INFO.telLink}
                     className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-cyan-400 hover:text-cyan-300 transition-colors"

@@ -79,7 +79,7 @@ export const ZipAvailabilityModal: React.FC<ZipAvailabilityModalProps> = ({
       }}
     >
       <div
-        className="relative w-full max-w-md bg-gradient-to-b from-[#0a1120] via-[#050912] to-black border border-cyan-500/40 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-cyan-950/60 text-left my-8 transition-all"
+        className="relative w-full max-w-md bg-gradient-to-b from-[#0a1120] via-[#050912] to-black border border-cyan-500/40 rounded-2xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/60 text-left my-8 transition-all"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glowing top line */}

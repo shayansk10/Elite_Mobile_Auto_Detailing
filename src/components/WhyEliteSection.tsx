@@ -41,11 +41,11 @@ export const WhyEliteSection: React.FC<WhyEliteSectionProps> = ({
   };
 
   return (
-    <section id="why-elite" className="py-24 bg-[#05080e] relative border-t border-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="why-elite" className="py-20 sm:py-24 bg-[#05080e] relative border-t border-slate-900 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             The Elite Standard
@@ -66,7 +66,7 @@ export const WhyEliteSection: React.FC<WhyEliteSectionProps> = ({
             <div
               key={point.id}
               id={`why-card-${point.id}`}
-              className="group p-7 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-cyan-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-950/20 flex flex-col justify-between"
+              className="group p-5 sm:p-7 rounded-2xl bg-slate-950/80 border border-slate-800/80 hover:border-cyan-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-950/20 flex flex-col justify-between"
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-500/30 flex items-center justify-center mb-5 group-hover:border-cyan-400 group-hover:shadow-md group-hover:shadow-cyan-500/20 transition-all">
@@ -95,14 +95,14 @@ export const WhyEliteSection: React.FC<WhyEliteSectionProps> = ({
         </div>
 
         {/* Authentic Mobile Workshop Callout Banner */}
-        <div className="mt-14 p-8 rounded-2xl bg-gradient-to-r from-slate-950 via-[#0a1120] to-slate-950 border border-cyan-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
-              <Truck className="w-7 h-7" />
+        <div className="mt-12 sm:mt-14 p-5 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-950 via-[#0a1120] to-slate-950 border border-cyan-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full md:w-auto">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+              <Truck className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <div>
-              <div className="text-lg font-heading font-bold text-white">Fully Mobile Detailing Rig</div>
-              <div className="text-xs sm:text-sm text-slate-300">
+              <div className="text-base sm:text-lg font-heading font-bold text-white">Fully Mobile Detailing Rig</div>
+              <div className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                 We bring specialized pressure washers, spot-free filtration options, hot-water extractors, and dual-action polishers straight to you.
               </div>
             </div>
@@ -117,7 +117,7 @@ export const WhyEliteSection: React.FC<WhyEliteSectionProps> = ({
                 onOpenBooking();
               }
             }}
-            className="shrink-0 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-bold text-xs tracking-wider uppercase transition-all shadow-lg shadow-cyan-500/25 cursor-pointer active:scale-95"
+            className="w-full sm:w-auto shrink-0 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-bold text-xs tracking-wider uppercase transition-all shadow-lg shadow-cyan-500/25 cursor-pointer active:scale-95"
           >
             Check Availability
           </button>

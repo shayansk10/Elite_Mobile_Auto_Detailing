@@ -23,13 +23,13 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 to-[#070b12] border border-cyan-500/40 rounded-2xl p-6 sm:p-8 shadow-2xl text-left my-8"
+        className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 to-[#070b12] border border-cyan-500/40 rounded-2xl p-5 sm:p-8 shadow-2xl text-left my-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white hover:border-cyan-400 transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full bg-slate-900 border border-slate-700 text-slate-400 hover:text-white hover:border-cyan-400 transition-colors cursor-pointer"
           aria-label="Close Modal"
         >
           <X className="w-5 h-5" />
@@ -56,12 +56,12 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         </p>
 
         {/* Pricing & Duration Bar */}
-        <div className="flex items-center gap-6 py-3 px-4 rounded-xl bg-slate-950/80 border border-slate-800 mb-6 text-xs">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-6 py-3 px-4 rounded-xl bg-slate-950/80 border border-slate-800 mb-6 text-xs">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-cyan-400" />
             <span className="text-slate-300">Duration: <strong className="text-white">{service.duration}</strong></span>
           </div>
-          <div className="h-4 w-px bg-slate-800" />
+          <div className="hidden sm:block h-4 w-px bg-slate-800" />
           <div>
             <span className="text-slate-300">Investment: <strong className="text-cyan-400 font-bold">{service.startingPrice}</strong></span>
           </div>

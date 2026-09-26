@@ -31,7 +31,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
   }, []);
 
   return (
-    <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div className="pt-24 sm:pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full overflow-hidden">
       {/* Top Breadcrumb & Return Button */}
       <div className="mb-8 flex items-center justify-between flex-wrap gap-4 border-b border-slate-800/80 pb-4">
         <button

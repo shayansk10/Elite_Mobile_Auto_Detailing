@@ -121,14 +121,14 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#030508] relative border-t border-slate-900">
+    <section id="contact" className="py-20 sm:py-24 bg-[#030508] relative border-t border-slate-900 overflow-hidden w-full max-w-full">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/3 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[160px] pointer-events-none max-w-full" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Direct Mobile Scheduling & Quotes
@@ -138,7 +138,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
             BOOK YOUR DETAIL OR <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">REQUEST A QUOTE</span>
           </h2>
 
-          <p className="text-slate-400 text-base leading-relaxed">
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             We bring premium automotive care directly to your home driveway or workplace. Fill out the form below or text us directly for quick scheduling.
           </p>
         </div>
@@ -149,7 +149,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
           <div className="lg:col-span-4 space-y-6">
             
             {/* Quick Action Box */}
-            <div className="p-6 rounded-2xl bg-[#060c18] border border-cyan-500/30 shadow-xl space-y-5">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#060c18] border border-cyan-500/30 shadow-xl space-y-5">
               <h3 className="font-heading font-bold text-lg text-white flex items-center gap-2">
                 <Clock className="w-5 h-5 text-cyan-400" />
                 <span>Immediate Scheduling</span>
@@ -162,24 +162,24 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
               <div className="space-y-3 pt-1">
                 <a
                   href={BUSINESS_INFO.smsLink}
-                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-black text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 active:scale-98 transition-all"
+                  className="w-full py-3 px-3 sm:px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-black text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 active:scale-98 transition-all"
                 >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>TEXT US: {BUSINESS_INFO.displayPhone}</span>
+                  <MessageSquare className="w-4 h-4 shrink-0" />
+                  <span className="truncate">TEXT US: {BUSINESS_INFO.displayPhone}</span>
                 </a>
 
                 <a
                   href={BUSINESS_INFO.telLink}
-                  className="w-full py-3 px-4 rounded-xl bg-slate-900 border border-slate-750 hover:border-cyan-500/40 text-slate-200 hover:text-white font-heading font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors"
+                  className="w-full py-3 px-3 sm:px-4 rounded-xl bg-slate-900 border border-slate-750 hover:border-cyan-500/40 text-slate-200 hover:text-white font-heading font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>CALL DIRECT: {BUSINESS_INFO.displayPhone}</span>
+                  <Phone className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <span className="truncate">CALL DIRECT: {BUSINESS_INFO.displayPhone}</span>
                 </a>
               </div>
             </div>
 
             {/* Service Capabilities */}
-            <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800/80 space-y-4">
+            <div className="p-5 sm:p-6 rounded-2xl bg-slate-950/80 border border-slate-800/80 space-y-4">
               <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4" />
                 What to Expect
@@ -215,8 +215,8 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
           </div>
 
           {/* Right Column: The Premium Booking Form */}
-          <div className="lg:col-span-8">
-            <div className="p-7 sm:p-9 rounded-2xl bg-slate-950/90 border border-slate-800/90 shadow-2xl relative">
+          <div className="lg:col-span-8 w-full">
+            <div className="p-4 sm:p-9 rounded-2xl bg-slate-950/90 border border-slate-800/90 shadow-2xl relative w-full">
               
               {isSubmitted ? (
                 <div className="text-center py-12 space-y-5 animate-fadeIn">

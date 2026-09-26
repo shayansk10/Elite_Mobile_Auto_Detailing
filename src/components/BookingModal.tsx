@@ -147,7 +147,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     >
       <div
         id="booking-modal-container"
-        className="relative w-full max-w-xl bg-gradient-to-b from-[#0a0f18] via-[#05080e] to-[#020408] border border-cyan-500/40 rounded-2xl p-5 sm:p-8 shadow-2xl shadow-cyan-950/50 text-left my-auto max-h-[92vh] overflow-y-auto"
+        className="relative w-full max-w-xl bg-gradient-to-b from-[#0a0f18] via-[#05080e] to-[#020408] border border-cyan-500/40 rounded-2xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/50 text-left my-auto max-h-[92vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}

@@ -21,11 +21,11 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartBooking }) => {
   };
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#030508] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="how-it-works" className="py-20 sm:py-24 bg-[#030508] relative overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Simple 3-Step Process
@@ -41,7 +41,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartBooking }) => {
         </div>
 
         {/* 3 Step Timeline Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative">
           
           {/* Connecting line on desktop */}
           <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-cyan-500/20 via-cyan-500/50 to-blue-500/20 -translate-y-8 pointer-events-none" />
@@ -50,7 +50,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartBooking }) => {
             <div
               key={step.step}
               id={`process-step-${step.step}`}
-              className="relative rounded-2xl bg-slate-950/90 border border-slate-800 p-8 flex flex-col justify-between hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-950/30 transition-all group"
+              className="relative rounded-2xl bg-slate-950/90 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-950/30 transition-all group"
             >
               <div>
                 {/* Step Number & Icon */}

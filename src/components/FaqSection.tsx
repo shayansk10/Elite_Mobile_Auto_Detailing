@@ -12,11 +12,11 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#05080e] relative border-t border-slate-900">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="faq" className="py-20 sm:py-24 bg-[#05080e] relative border-t border-slate-900 overflow-hidden w-full max-w-full">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" />
             Frequently Asked Questions
@@ -48,19 +48,19 @@ export const FaqSection: React.FC = () => {
                 <button
                   id={`faq-toggle-${faq.id}`}
                   onClick={() => toggleFaq(faq.id)}
-                  className="w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full px-4 sm:px-6 py-4 sm:py-4.5 text-left flex items-start sm:items-center justify-between gap-3 sm:gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-cyan-400 font-mono text-xs font-semibold px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-500/30">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 flex-1 min-w-0">
+                    <span className="text-cyan-400 font-mono text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-500/30 w-fit">
                       {faq.category}
                     </span>
-                    <span className="font-heading font-bold text-base sm:text-lg text-white">
+                    <span className="font-heading font-bold text-sm sm:text-base md:text-lg text-white break-words">
                       {faq.question}
                     </span>
                   </div>
 
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors shrink-0 ${
+                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-colors shrink-0 mt-0.5 sm:mt-0 ${
                     isOpen ? 'bg-cyan-500/20 text-cyan-400' : 'bg-slate-900 text-slate-400'
                   }`}>
                     {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -68,7 +68,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-900/80">
+                  <div className="px-4 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-900/80">
                     <p className="pt-2">{faq.answer}</p>
                   </div>
                 )}
