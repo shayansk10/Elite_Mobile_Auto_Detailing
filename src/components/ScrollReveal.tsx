@@ -23,16 +23,19 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
 }) => {
   const elementRef = useRef<HTMLElement>(null);
   const [isRevealed, setIsRevealed] = useState(false);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     // Respect user's motion preference immediately
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setIsRevealed(true);
+      setIsComplete(true);
       return;
     }
 
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
       setIsRevealed(true);
+      setIsComplete(true);
       return;
     }
 
@@ -59,7 +62,26 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     };
   }, [threshold]);
 
+  // When revealed, schedule transition completion to cleanly reset transforms and classes
+  useEffect(() => {
+    if (!isRevealed || isComplete) return;
+
+    const timeoutDuration = Math.max(0, delay) + Math.max(0, duration) + 80;
+    const timer = setTimeout(() => {
+      setIsComplete(true);
+    }, timeoutDuration);
+
+    return () => clearTimeout(timer);
+  }, [isRevealed, isComplete, delay, duration]);
+
+  const handleTransitionEnd = (e: React.TransitionEvent<HTMLElement>) => {
+    if (e.target === elementRef.current) {
+      setIsComplete(true);
+    }
+  };
+
   const getVariantClasses = () => {
+    if (isComplete) return '';
     switch (variant) {
       case 'fade-scale':
         return isRevealed ? 'reveal-scale-active' : 'reveal-scale-hidden';
@@ -75,14 +97,21 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     }
   };
 
+  const animationClasses = isComplete ? '' : `reveal-base ${getVariantClasses()}`;
+
   return (
     <Component
-      ref={elementRef}
-      className={`reveal-base ${getVariantClasses()} ${className}`}
-      style={{
-        transitionDelay: isRevealed ? `${delay}ms` : '0ms',
-        transitionDuration: `${duration}ms`,
-      }}
+      ref={elementRef as any}
+      onTransitionEnd={handleTransitionEnd}
+      className={`${animationClasses} ${className}`.trim()}
+      style={
+        isComplete
+          ? undefined
+          : {
+              transitionDelay: isRevealed ? `${delay}ms` : '0ms',
+              transitionDuration: `${duration}ms`,
+            }
+      }
     >
       {children}
     </Component>
