@@ -110,3 +110,126 @@
 .animate-pulse-glow {
   animation: pulseGlow 2.6s ease-in-out infinite;
 }
+
+/* ==========================================================================
+   Smooth Premium Scroll Reveal System
+   ========================================================================== */
+.reveal-base {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up-hidden {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.reveal-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade-hidden {
+  opacity: 0;
+}
+
+.reveal-fade-active {
+  opacity: 1;
+}
+
+.reveal-scale-hidden {
+  opacity: 0;
+  transform: scale(0.97) translateY(14px);
+}
+
+.reveal-scale-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.reveal-left-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-left-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-right-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-right-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Smooth Premium Popup & Dialog Animations
+   ========================================================================== */
+@keyframes popupOverlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupContentEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-overlay-fade {
+  animation: popupOverlayFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.popup-card-scale {
+  animation: popupContentEnter 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+/* ==========================================================================
+   Accessibility: prefers-reduced-motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-base,
+  .reveal-up-hidden,
+  .reveal-up-active,
+  .reveal-fade-hidden,
+  .reveal-fade-active,
+  .reveal-scale-hidden,
+  .reveal-scale-active,
+  .reveal-left-hidden,
+  .reveal-left-active,
+  .reveal-right-hidden,
+  .reveal-right-active,
+  .popup-overlay-fade,
+  .popup-card-scale,
+  .animate-subtle-float,
+  .animate-pulse-glow {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+

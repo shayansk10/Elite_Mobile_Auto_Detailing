@@ -10,6 +10,7 @@ import {
   Facebook
 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
+import { ScrollReveal } from './ScrollReveal';
 
 interface FooterProps {
   onOpenBooking: (serviceName?: string) => void;
@@ -49,47 +50,49 @@ export const Footer: React.FC<FooterProps> = ({
       
       {/* Top Footer Banner: Big Final Conversion Prompt */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 w-full">
-        <div className="p-5 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-950 via-[#081220] to-slate-950 border border-cyan-500/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden w-full">
-          
-          <div className="space-y-2 text-center md:text-left relative z-10">
-            <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-widest block">
-              EXPERIENCE THE SHINE
-            </span>
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-white">
-              Ready for Showroom Perfection at Your Doorstep?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-              Book your mobile detail today. We bring our own high-end gear and specialized craftsmanship to you.
-            </p>
-          </div>
+        <ScrollReveal variant="fade-up" className="w-full">
+          <div className="p-5 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-950 via-[#081220] to-slate-950 border border-cyan-500/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden w-full">
+            
+            <div className="space-y-2 text-center md:text-left relative z-10">
+              <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-widest block">
+                EXPERIENCE THE SHINE
+              </span>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-white">
+                Ready for Showroom Perfection at Your Doorstep?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
+                Book your mobile detail today. We bring our own high-end gear and specialized craftsmanship to you.
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 relative z-10 shrink-0 w-full sm:w-auto">
-            <button
-              onClick={() => onOpenBooking()}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <Calendar className="w-4 h-4" />
-              <span>BOOK YOUR DETAIL</span>
-            </button>
-            <a
-              href={BUSINESS_INFO.smsLink}
-              className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-cyan-400 font-heading font-bold text-xs uppercase tracking-wider border border-slate-750 transition-colors flex items-center justify-center gap-2"
-            >
-              <MessageSquare className="w-4 h-4 text-cyan-400" />
-              <span>TEXT US</span>
-            </a>
-          </div>
+            <div className="flex flex-col sm:flex-row items-center gap-3 relative z-10 shrink-0 w-full sm:w-auto">
+              <button
+                onClick={() => onOpenBooking()}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>BOOK YOUR DETAIL</span>
+              </button>
+              <a
+                href={BUSINESS_INFO.smsLink}
+                className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-cyan-400 font-heading font-bold text-xs uppercase tracking-wider border border-slate-750 transition-colors flex items-center justify-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4 text-cyan-400" />
+                <span>TEXT US</span>
+              </a>
+            </div>
 
-          {/* Ambient blue background highlight */}
-          <div className="absolute right-0 top-0 bottom-0 w-96 bg-cyan-500/10 blur-3xl pointer-events-none" />
-        </div>
+            {/* Ambient blue background highlight */}
+            <div className="absolute right-0 top-0 bottom-0 w-96 bg-cyan-500/10 blur-3xl pointer-events-none" />
+          </div>
+        </ScrollReveal>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-slate-900">
           
           {/* Column 1: Brand Info */}
-          <div className="lg:col-span-2 space-y-5">
+          <ScrollReveal variant="fade-up" delay={60} className="lg:col-span-2 space-y-5">
             <div className="flex flex-col select-none">
               <div className="flex items-baseline gap-1.5 leading-none">
                 <span className="font-heading text-2xl font-black tracking-tight text-white">
@@ -162,10 +165,10 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Column 2: Quick Links */}
-          <div className="space-y-4">
+          <ScrollReveal variant="fade-up" delay={120} className="space-y-4">
             <h4 className="font-heading font-bold text-white text-base tracking-wider uppercase">
               Quick Links
             </h4>
@@ -191,10 +194,10 @@ export const Footer: React.FC<FooterProps> = ({
                 </li>
               ))}
             </ul>
-          </div>
+          </ScrollReveal>
 
           {/* Column 3: Featured Services */}
-          <div className="space-y-4">
+          <ScrollReveal variant="fade-up" delay={180} className="space-y-4">
             <h4 className="font-heading font-bold text-white text-base tracking-wider uppercase">
               Core Services
             </h4>
@@ -215,10 +218,10 @@ export const Footer: React.FC<FooterProps> = ({
                 </li>
               ))}
             </ul>
-          </div>
+          </ScrollReveal>
 
           {/* Column 4: Contact & Coverage */}
-          <div className="space-y-4">
+          <ScrollReveal variant="fade-up" delay={240} className="space-y-4">
             <h4 className="font-heading font-bold text-white text-base tracking-wider uppercase">
               Coverage & Contact
             </h4>
@@ -255,12 +258,12 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
 
         {/* Bottom Legal & Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <ScrollReveal variant="fade-in" delay={100} className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {currentYear} {BUSINESS_INFO.name}. All rights reserved. Professional Mobile Detailing.
           </div>
@@ -288,7 +291,7 @@ export const Footer: React.FC<FooterProps> = ({
               Terms & Conditions
             </a>
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </footer>

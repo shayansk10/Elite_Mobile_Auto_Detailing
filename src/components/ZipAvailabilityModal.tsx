@@ -73,13 +73,13 @@ export const ZipAvailabilityModal: React.FC<ZipAvailabilityModalProps> = ({
   return (
     <div
       id="zip-availability-modal"
-      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto popup-overlay-fade"
       onClick={() => {
         if (!isSuccess) onClose();
       }}
     >
       <div
-        className="relative w-full max-w-md bg-gradient-to-b from-[#0a1120] via-[#050912] to-black border border-cyan-500/40 rounded-2xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/60 text-left my-8 transition-all"
+        className="relative w-full max-w-md bg-gradient-to-b from-[#0a1120] via-[#050912] to-black border border-cyan-500/40 rounded-2xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/60 text-left my-8 popup-card-scale transition-all"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glowing top line */}

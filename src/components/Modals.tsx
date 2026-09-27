@@ -19,11 +19,11 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
   return (
     <div
       id="service-detail-modal"
-      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto popup-overlay-fade"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 to-[#070b12] border border-cyan-500/40 rounded-2xl p-5 sm:p-8 shadow-2xl text-left my-8"
+        className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 to-[#070b12] border border-cyan-500/40 rounded-2xl p-5 sm:p-8 shadow-2xl text-left my-8 popup-card-scale"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -136,11 +136,11 @@ export const TextModal: React.FC<TextModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto popup-overlay-fade"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-xl bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl text-left my-8 max-h-[85vh] overflow-y-auto"
+        className="relative w-full max-w-xl bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl text-left my-8 max-h-[85vh] overflow-y-auto popup-card-scale"
         onClick={(e) => e.stopPropagation()}
       >
         <button

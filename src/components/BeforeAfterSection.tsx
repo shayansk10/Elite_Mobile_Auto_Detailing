@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Sparkles, MoveHorizontal } from 'lucide-react';
 import { BEFORE_AFTER_SHOWCASES } from '../data/content';
+import { ScrollReveal } from './ScrollReveal';
 
 interface BeforeAfterSectionProps {
   onOpenBooking?: (serviceName?: string) => void;
@@ -49,7 +50,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-14">
+        <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Visual Proof of Transformation
@@ -62,10 +63,10 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = () => {
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             Drag the interactive slider below to inspect the complete transformation from dull, swirled, road-worn paint to a mirror-deep showroom finish.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* ONE Interactive Comparison Slider Container */}
-        <div className="max-w-4xl mx-auto w-full">
+        <ScrollReveal variant="fade-scale" delay={120} className="max-w-4xl mx-auto w-full">
           <div
             id="before-after-slider-container"
             ref={containerRef}
@@ -119,7 +120,7 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = () => {
               <span className="truncate">Drag slider horizontally to compare</span>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>

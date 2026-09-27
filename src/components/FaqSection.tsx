@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp, MessageCircleQuestion } from 'lucide-react';
 import { FAQS_DATA, BUSINESS_INFO } from '../data/content';
+import { ScrollReveal } from './ScrollReveal';
 
 export const FaqSection: React.FC = () => {
   const [openIds, setOpenIds] = useState<string[]>(['faq-1', 'faq-5']);
@@ -16,7 +17,7 @@ export const FaqSection: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
+        <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" />
             Frequently Asked Questions
@@ -29,10 +30,10 @@ export const FaqSection: React.FC = () => {
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             Have questions about our mobile setup, water/power needs, or service durations? Here are clear, straightforward answers.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-3.5">
+        <ScrollReveal variant="fade-up" delay={80} className="space-y-3.5">
           {FAQS_DATA.map((faq) => {
             const isOpen = openIds.includes(faq.id);
             return (
@@ -75,10 +76,10 @@ export const FaqSection: React.FC = () => {
               </div>
             );
           })}
-        </div>
+        </ScrollReveal>
 
         {/* FAQ Bottom Support Note */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <ScrollReveal variant="fade-up" delay={140} className="mt-12 text-center p-6 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
             <MessageCircleQuestion className="w-8 h-8 text-cyan-400 shrink-0" />
             <div>
@@ -97,7 +98,7 @@ export const FaqSection: React.FC = () => {
               Text Us
             </a>
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>

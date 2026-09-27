@@ -8,6 +8,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { ServiceItem } from '../types';
+import { ScrollReveal } from './ScrollReveal';
 
 interface ServicesSectionProps {
   onSelectServiceForBooking: (serviceName: string) => void;
@@ -48,7 +49,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Precision Detailing Services
@@ -61,16 +62,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             Professional mobile detailing delivered directly to your home or office. Choose our complete interior reset, our exterior shine refresh, or build a custom detail around your vehicle's exact needs.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Exactly 3 Service Cards Grid: 3 columns on desktop, equal height */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
           {/* CARD 1: INTERIOR DETAILING */}
-          <div
-            id="service-card-interior"
-            className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f18] to-[#04070c] border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/40"
-          >
+          <ScrollReveal variant="fade-up" delay={60} className="flex flex-col h-full">
+            <div
+              id="service-card-interior"
+              className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f18] to-[#04070c] border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/40 h-full flex-1"
+            >
             {/* Top edge glow accent */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl" />
 
@@ -121,11 +123,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               </button>
             </div>
           </div>
+        </ScrollReveal>
 
-          {/* CARD 2: EXTERIOR DETAILING */}
+        {/* CARD 2: EXTERIOR DETAILING */}
+        <ScrollReveal variant="fade-up" delay={140} className="flex flex-col h-full">
           <div
             id="service-card-exterior"
-            className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f18] to-[#04070c] border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/40"
+            className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f18] to-[#04070c] border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/40 h-full flex-1"
           >
             {/* Top edge glow accent */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-t-2xl" />
@@ -177,11 +181,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               </button>
             </div>
           </div>
+        </ScrollReveal>
 
-          {/* CARD 3: CUSTOM DETAILING */}
+        {/* CARD 3: CUSTOM DETAILING */}
+        <ScrollReveal variant="fade-up" delay={220} className="flex flex-col h-full">
           <div
             id="service-card-custom"
-            className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f18] to-[#04070c] border border-cyan-500/30 hover:border-cyan-400/60 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/50"
+            className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f18] to-[#04070c] border border-cyan-500/30 hover:border-cyan-400/60 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/50 h-full flex-1"
           >
             {/* Top edge glow accent */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-40 group-hover:opacity-100 transition-opacity rounded-t-2xl" />
@@ -241,6 +247,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               </button>
             </div>
           </div>
+        </ScrollReveal>
 
         </div>
 

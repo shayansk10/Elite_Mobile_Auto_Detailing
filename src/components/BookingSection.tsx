@@ -16,6 +16,7 @@ import {
 import { BUSINESS_INFO, SERVICES_DATA } from '../data/content';
 import { BookingFormData } from '../types';
 import { sendInquiryForm } from '../services/emailjs';
+import { ScrollReveal } from './ScrollReveal';
 
 interface BookingSectionProps {
   prefillServiceOrPackage?: string;
@@ -128,7 +129,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
+        <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Direct Mobile Scheduling & Quotes
@@ -141,12 +142,12 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             We bring premium automotive care directly to your home driveway or workplace. Fill out the form below or text us directly for quick scheduling.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Quick Contact & Service Guarantees */}
-          <div className="lg:col-span-4 space-y-6">
+          <ScrollReveal variant="fade-up" delay={80} className="lg:col-span-4 space-y-6">
             
             {/* Quick Action Box */}
             <div className="p-5 sm:p-6 rounded-2xl bg-[#060c18] border border-cyan-500/30 shadow-xl space-y-5">
@@ -212,10 +213,10 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: The Premium Booking Form */}
-          <div className="lg:col-span-8 w-full">
+          <ScrollReveal variant="fade-scale" delay={160} className="lg:col-span-8 w-full">
             <div className="p-4 sm:p-9 rounded-2xl bg-slate-950/90 border border-slate-800/90 shadow-2xl relative w-full">
               
               {isSubmitted ? (
@@ -499,7 +500,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
               )}
 
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
 

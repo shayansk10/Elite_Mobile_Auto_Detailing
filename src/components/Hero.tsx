@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, ArrowRight, ShieldCheck, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
+import { ScrollReveal } from './ScrollReveal';
 
 interface HeroProps {
   onBookDetail: () => void;
@@ -30,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDetail, onViewServices }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Headlines & CTAs */}
-          <div className="lg:col-span-7 text-center lg:text-left space-y-6">
+          <ScrollReveal variant="fade-up" delay={80} className="lg:col-span-7 text-center lg:text-left space-y-6">
             
             {/* Small Brand Pill / Trust Marker */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-medium tracking-wide shadow-lg shadow-cyan-950/40">
@@ -124,10 +125,10 @@ export const Hero: React.FC<HeroProps> = ({ onBookDetail, onViewServices }) => {
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Hero Vehicle & Brand Visual with Logo badge */}
-          <div className="lg:col-span-5 relative">
+          <ScrollReveal variant="fade-scale" delay={180} className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Electric blue glow container */}
@@ -183,7 +184,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDetail, onViewServices }) => {
               </div>
 
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

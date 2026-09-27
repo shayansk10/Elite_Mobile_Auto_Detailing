@@ -139,7 +139,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   return (
     <div
       id="booking-modal-overlay"
-      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto animate-fadeIn"
+      className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto popup-overlay-fade"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -147,7 +147,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     >
       <div
         id="booking-modal-container"
-        className="relative w-full max-w-xl bg-gradient-to-b from-[#0a0f18] via-[#05080e] to-[#020408] border border-cyan-500/40 rounded-2xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/50 text-left my-auto max-h-[92vh] overflow-y-auto"
+        className="relative w-full max-w-xl bg-gradient-to-b from-[#0a0f18] via-[#05080e] to-[#020408] border border-cyan-500/40 rounded-2xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/50 text-left my-auto max-h-[92vh] overflow-y-auto popup-card-scale"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
