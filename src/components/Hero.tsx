@@ -109,19 +109,19 @@ export const Hero: React.FC<HeroProps> = ({ onBookDetail, onViewServices }) => {
               <div className="p-3 rounded-lg bg-slate-950/60 border border-slate-800/60">
                 <div className="flex items-center gap-1.5 text-cyan-400 text-xs font-semibold">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  <span>Ceramic</span>
+                  <span>Professional</span>
                 </div>
-                <div className="text-white text-xs sm:text-sm font-bold mt-1">Quartz Defense</div>
-                <div className="text-[11px] text-slate-400">Deep hydrophobic gloss</div>
+                <div className="text-white text-xs sm:text-sm font-bold mt-1">Showroom Finish</div>
+                <div className="text-[11px] text-slate-400">Clean, polished results</div>
               </div>
 
               <div className="p-3 rounded-lg bg-slate-950/60 border border-slate-800/60">
                 <div className="flex items-center gap-1.5 text-cyan-400 text-xs font-semibold">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Correction</span>
+                  <span>Interior Care</span>
                 </div>
-                <div className="text-white text-xs sm:text-sm font-bold mt-1">Swirl-Free Paint</div>
-                <div className="text-[11px] text-slate-400">Optical mirror clarity</div>
+                <div className="text-white text-xs sm:text-sm font-bold mt-1">Interior Cleaning</div>
+                <div className="text-[11px] text-slate-400">Fresh, spotless interior</div>
               </div>
             </div>
 
