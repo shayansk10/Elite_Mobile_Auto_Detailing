@@ -4,8 +4,7 @@ import {
   Droplets,
   Sliders,
   ArrowRight,
-  CheckCircle2,
-  HelpCircle
+  CheckCircle2
 } from 'lucide-react';
 import { ServiceItem } from '../types';
 import { ScrollReveal } from './ScrollReveal';
@@ -38,6 +37,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     'Dress wheels, tires and rims',
     'Clean all door jambs and trunk sealants',
     'Dry microfiber cloth',
+  ];
+
+  // Card 3 Checklist: Exterior & Interior Both
+  const bothChecklist = [
+    'Complete interior cleaning',
+    'Exterior hand wash & finish',
+    'Interior and exterior windows',
+    'Tires, wheels & door jambs',
   ];
 
   return (
@@ -183,7 +190,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </div>
         </ScrollReveal>
 
-        {/* CARD 3: CUSTOM DETAILING */}
+        {/* CARD 3: EXTERIOR & INTERIOR BOTH */}
         <ScrollReveal variant="fade-up" delay={220} className="flex flex-col h-full">
           <div
             id="service-card-custom"
@@ -199,39 +206,31 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   <Sliders className="w-6 h-6" />
                 </div>
                 <span className="px-3 py-1 rounded-full text-[11px] font-mono font-semibold uppercase tracking-wider bg-cyan-900/40 text-cyan-300 border border-cyan-400/40">
-                  CUSTOM
+                  BOTH SERVICES
                 </span>
               </div>
 
               {/* Title & Short Description */}
               <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors">
-                Custom Detailing
+                Exterior & Interior Both
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-2 mb-6">
-                Need something specific? Tell us exactly what your vehicle needs and we'll build a custom detailing service around your request.
+                Complete detailing for both the exterior and interior of your vehicle, giving your car a thorough clean and refreshed finish inside and out.
               </p>
 
-              {/* Customer-Focused Message Box */}
-              <div className="border-t border-slate-800/80 pt-5 pb-6 space-y-4">
-                <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30">
-                  <div className="flex items-start gap-2.5">
-                    <HelpCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                    <div>
-                      <span className="text-xs sm:text-sm font-semibold text-white block">
-                        "Tell us what you'd like cleaned, detailed, restored, or refreshed."
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="text-xs text-slate-300 leading-relaxed space-y-2 pt-1">
-                  <p>
-                    Whether you need a specialized combination, spot stain treatment, multiple vehicles, or a customized maintenance schedule, we're ready to accommodate.
-                  </p>
-                  <p className="text-slate-400">
-                    Click below to open our estimate form and use the <span className="text-cyan-300 font-medium">Additional Notes</span> field to explain your exact goals.
-                  </p>
-                </div>
+              {/* Service Summary Checklist */}
+              <div className="border-t border-slate-800/80 pt-5 pb-6">
+                <span className="text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider block mb-3">
+                  Included:
+                </span>
+                <ul className="space-y-2.5">
+                  {bothChecklist.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                      <span className="leading-snug">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -239,10 +238,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             <div className="pt-6">
               <button
                 id="quote-btn-custom"
-                onClick={() => onSelectServiceForBooking('Custom Detail')}
+                onClick={() => onSelectServiceForBooking('Exterior & Interior Both')}
                 className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-heading font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 transition-all duration-200 flex items-center justify-center gap-2 group/btn cursor-pointer active:scale-[0.98]"
               >
-                <span>REQUEST CUSTOM DETAIL</span>
+                <span>GET YOUR QUOTE</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </button>
             </div>
