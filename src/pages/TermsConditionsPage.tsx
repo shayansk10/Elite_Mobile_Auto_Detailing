@@ -182,7 +182,7 @@ export const TermsConditionsPage: React.FC<TermsConditionsPageProps> = ({
             </h2>
           </div>
           <p className="mb-3">
-            Pricing displayed or quoted corresponds to standard vehicle sizes and typical maintenance conditions for Interior, Exterior, or Custom detailing services.
+            Pricing displayed or quoted corresponds to standard vehicle sizes and typical maintenance conditions for Interior, Exterior, or Exterior & Interior Both detailing services.
           </p>
           <p>
             If a vehicle exhibits extraordinary conditions—such as excessive pet hair, heavy mold or biological matter, severe paint contamination, or extensive interior staining—any necessary price adjustment will be clearly communicated and agreed upon before work proceeds.

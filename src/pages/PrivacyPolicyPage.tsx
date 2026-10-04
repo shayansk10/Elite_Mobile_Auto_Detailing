@@ -209,7 +209,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
             When you complete our contact or booking form, your submitted details are utilized directly to prepare an accurate, transparent quote and evaluate scheduling availability.
           </p>
           <p>
-            Our team reviews your vehicle make, model, selected service (Interior, Exterior, or Custom), and location to formulate realistic timeframes and confirm that our mobile setup can accommodate your vehicle at your chosen address.
+            Our team reviews your vehicle make, model, selected service (Interior, Exterior, or Exterior & Interior Both), and location to formulate realistic timeframes and confirm that our mobile setup can accommodate your vehicle at your chosen address.
           </p>
         </section>
 

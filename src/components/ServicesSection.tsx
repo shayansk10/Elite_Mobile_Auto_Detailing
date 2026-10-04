@@ -67,7 +67,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </h2>
           
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Professional mobile detailing delivered directly to your home or office. Choose our complete interior reset, our exterior shine refresh, or build a custom detail around your vehicle's exact needs.
+            Professional mobile detailing delivered directly to your home or office. Choose our complete interior reset, our exterior shine refresh, or our comprehensive exterior and interior package.
           </p>
         </ScrollReveal>
 

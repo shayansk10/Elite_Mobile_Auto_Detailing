@@ -324,7 +324,7 @@ export const FAQS_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'How long does a detail take?',
-    answer: 'Interior Detailing typically takes approximately 1–1.5 hours, while Exterior Detailing typically takes approximately 1–1.5 hours. Custom Detailing varies depending on the specific services requested.',
+    answer: 'Interior Detailing typically takes approximately 1–1.5 hours, while Exterior Detailing typically takes approximately 1–1.5 hours. Exterior & Interior Both typically takes approximately 2–3 hours.',
     category: 'Duration'
   },
   {

@@ -205,7 +205,7 @@ export const Footer: React.FC<FooterProps> = ({
               {[
                 { name: 'Interior', value: 'Interior Detailing' },
                 { name: 'Exterior', value: 'Exterior Detailing' },
-                { name: 'Custom', value: 'Custom Detail' }
+                { name: 'Exterior & Interior Both', value: 'Exterior & Interior Both' }
               ].map((service) => (
                 <li key={service.name}>
                   <button

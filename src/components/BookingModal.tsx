@@ -39,10 +39,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   useEffect(() => {
     if (prefillService) {
       const lower = prefillService.toLowerCase();
-      if (lower.includes('exterior')) {
+      if (lower.includes('both') || (lower.includes('exterior') && lower.includes('interior'))) {
+        setFormData((prev) => ({ ...prev, service_needed: 'Exterior & Interior Both' }));
+      } else if (lower.includes('exterior')) {
         setFormData((prev) => ({ ...prev, service_needed: 'Exterior' }));
       } else if (lower.includes('custom') || lower.includes('other') || lower.includes('paint') || lower.includes('ceramic')) {
-        setFormData((prev) => ({ ...prev, service_needed: 'Custom' }));
+        setFormData((prev) => ({ ...prev, service_needed: 'Exterior & Interior Both' }));
       } else {
         setFormData((prev) => ({ ...prev, service_needed: 'Interior' }));
       }
@@ -339,7 +341,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 >
                   <option value="Interior">Interior</option>
                   <option value="Exterior">Exterior</option>
-                  <option value="Custom">Custom</option>
+                  <option value="Exterior & Interior Both">Exterior & Interior Both</option>
                 </select>
               </div>
 
