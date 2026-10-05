@@ -20,6 +20,7 @@ import { MobileStickyBar } from './components/MobileStickyBar';
 import { FloatingTextButton } from './components/FloatingTextButton';
 import { ServiceDetailModal } from './components/Modals';
 import { BookingModal } from './components/BookingModal';
+import { PromoOfferModal } from './components/PromoOfferModal';
 import { ZipAvailabilityModal } from './components/ZipAvailabilityModal';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsConditionsPage } from './pages/TermsConditionsPage';
@@ -224,6 +225,9 @@ export default function App() {
           openBookingModal(serviceName);
         }}
       />
+
+      {/* Promotional Limited-Time 10% OFF Offer Popup */}
+      <PromoOfferModal />
 
     </div>
   );
