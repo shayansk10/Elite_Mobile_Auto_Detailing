@@ -40,10 +40,13 @@ export default function App() {
       const path = window.location.pathname.toLowerCase();
       if (hash.includes('privacy') || path === '/privacy-policy') {
         setCurrentPage('privacy');
+        document.title = 'Privacy Policy | Elite Mobile Auto Detailing';
       } else if (hash.includes('terms') || path === '/terms-conditions') {
         setCurrentPage('terms');
+        document.title = 'Terms & Conditions | Elite Mobile Auto Detailing';
       } else {
         setCurrentPage('home');
+        document.title = 'Elite Mobile Auto Detailing | Showroom Finish, Wherever You Park';
       }
     };
 
@@ -59,16 +62,16 @@ export default function App() {
   const navigateTo = (page: 'home' | 'privacy' | 'terms', sectionHref?: string) => {
     setCurrentPage(page);
     if (page === 'privacy') {
+      document.title = 'Privacy Policy | Elite Mobile Auto Detailing';
       window.history.pushState({}, '', '#privacy-policy');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      document.title = 'Privacy Policy | Elite Mobile Auto Detailing';
     } else if (page === 'terms') {
+      document.title = 'Terms & Conditions | Elite Mobile Auto Detailing';
       window.history.pushState({}, '', '#terms-conditions');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      document.title = 'Terms & Conditions | Elite Mobile Auto Detailing';
     } else {
-      window.history.pushState({}, '', '#');
       document.title = 'Elite Mobile Auto Detailing | Showroom Finish, Wherever You Park';
+      window.history.pushState({}, '', '#');
       if (sectionHref && sectionHref !== '#') {
         setTimeout(() => {
           const el = document.querySelector(sectionHref);
