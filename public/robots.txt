@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elitemobileautodetailing.com/sitemap.xml
+Sitemap: https://elitemobiledetailing.site/sitemap.xml
