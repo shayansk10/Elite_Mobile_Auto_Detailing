@@ -46,7 +46,7 @@ export default function App() {
         document.title = 'Terms & Conditions | Elite Mobile Auto Detailing';
       } else {
         setCurrentPage('home');
-        document.title = 'Elite Mobile Auto Detailing | Showroom Finish, Wherever You Park';
+        document.title = 'Elite Mobile Auto Detailing | Professional Car & Mobile Auto Detailing';
       }
     };
 
@@ -70,7 +70,7 @@ export default function App() {
       window.history.pushState({}, '', '#terms-conditions');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      document.title = 'Elite Mobile Auto Detailing | Showroom Finish, Wherever You Park';
+      document.title = 'Elite Mobile Auto Detailing | Professional Car & Mobile Auto Detailing';
       window.history.pushState({}, '', '#');
       if (sectionHref && sectionHref !== '#') {
         setTimeout(() => {

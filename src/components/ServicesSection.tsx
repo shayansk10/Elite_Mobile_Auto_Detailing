@@ -95,12 +95,27 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               </div>
 
               {/* Title & Short Description */}
-              <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors">
-                Interior Detailing
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-2 mb-6">
-                A complete interior reset focused on restoring a clean, fresh, and comfortable cabin.
-              </p>
+              <div className="lg:min-h-[4rem] flex items-center">
+                <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors leading-tight">
+                  Interior Detailing
+                </h3>
+              </div>
+
+              {/* Price */}
+              <div className="mt-3 mb-4 flex items-baseline gap-2 flex-wrap">
+                <span className="text-3xl sm:text-4xl font-heading font-black text-white tracking-tight">
+                  $189
+                </span>
+                <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-wider">
+                  Starting at
+                </span>
+              </div>
+
+              <div className="lg:min-h-[4.5rem]">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  A comprehensive interior car detailing reset focused on deep vacuuming, steam sanitization, and restoring a clean, fresh cabin.
+                </p>
+              </div>
 
               {/* Exact Checklist */}
               <div className="border-t border-slate-800/80 pt-5 pb-6">
@@ -153,12 +168,27 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               </div>
 
               {/* Title & Short Description */}
-              <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors">
-                Exterior Detailing
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-2 mb-6">
-                A complete exterior refresh designed to clean, protect, and bring back the shine of your vehicle.
-              </p>
+              <div className="lg:min-h-[4rem] flex items-center">
+                <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors leading-tight">
+                  Exterior Detailing
+                </h3>
+              </div>
+
+              {/* Price */}
+              <div className="mt-3 mb-4 flex items-baseline gap-2 flex-wrap">
+                <span className="text-3xl sm:text-4xl font-heading font-black text-white tracking-tight">
+                  $169
+                </span>
+                <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-wider">
+                  Starting at
+                </span>
+              </div>
+
+              <div className="lg:min-h-[4.5rem]">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  A precision exterior mobile auto detailing refresh designed to wash, decontaminate, protect, and bring back your vehicle's gloss.
+                </p>
+              </div>
 
               {/* Exact Checklist */}
               <div className="border-t border-slate-800/80 pt-5 pb-6">
@@ -211,12 +241,27 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               </div>
 
               {/* Title & Short Description */}
-              <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors">
-                Exterior & Interior Both
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-2 mb-6">
-                Complete detailing for both the exterior and interior of your vehicle, giving your car a thorough clean and refreshed finish inside and out.
-              </p>
+              <div className="lg:min-h-[4rem] flex items-center">
+                <h3 className="text-2xl font-heading font-black text-white group-hover:text-cyan-300 transition-colors leading-tight">
+                  Exterior & Interior Both
+                </h3>
+              </div>
+
+              {/* Price */}
+              <div className="mt-3 mb-4 flex items-baseline gap-2 flex-wrap">
+                <span className="text-3xl sm:text-4xl font-heading font-black text-white tracking-tight">
+                  $229
+                </span>
+                <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-wider">
+                  Starting at
+                </span>
+              </div>
+
+              <div className="lg:min-h-[4.5rem]">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  Complete mobile detailing for both exterior and interior, delivering deep car detailing care and refreshed showroom shine inside and out.
+                </p>
+              </div>
 
               {/* Service Summary Checklist */}
               <div className="border-t border-slate-800/80 pt-5 pb-6">
